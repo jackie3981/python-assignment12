@@ -32,7 +32,7 @@ def update_graph(selected_country):
     # Filtrar filas por país
     filtered_df = df[df['country'] == selected_country]
     
-    # Crear gráfico de línea: year vs gdpPercap
+    # Create a graphic line: year vs gdpPercap
     fig = px.line(
         filtered_df,
         x="year",
@@ -41,6 +41,5 @@ def update_graph(selected_country):
     )
     return fig
 
-# Ejecutar la app
 if __name__ == "__main__":
     app.run(debug=True)
